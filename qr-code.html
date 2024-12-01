@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Scanner</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- Navigation Bar -->
+    <header class="navbar navbar-dark py-3 px-4">
+        <div class="d-flex align-items-center">
+            <a href="index.html" class="d-flex align-items-center">
+                <img src="assets/logo.png" alt="Mobigo-Logo" class="navbar-logo">
+            </a>
+        </div>
+       
+    </header>
+
+    <!-- Main Content -->
+    <main class="container-fluid py-5" style="background-color: #f8f9fa; padding: 0 15px;">
+        <h1 class="text-center mb-4 intro-text main-title">Scan QR Code</h1>
+
+        <div class="container d-flex flex-column align-items-center">
+            <div class="camera-container">
+                <video id="camera-feed" autoplay playsinline></video>
+            </div>
+            <div class="instructions mt-4">
+                Simply scan the QR code on a vehicle to unlock it
+            </div>
+            <div class="mt-4">
+                <a href="qr-book.html" class="btn btn-primary">Get Details</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer text-light mt-auto py-3">
+        <div class="container text-center">
+            <!-- Row of icons -->
+            <div class="d-flex justify-content-between">
+                <a href="home.html" class="footer-icon" aria-label="Home">
+                    <i class="fas fa-home"></i>
+                </a>
+                <a href="qr-code.html" class="footer-icon" aria-label="QR Code">
+                    <i class="fas fa-qrcode"></i>
+                </a>
+                <a href="fuelinfo.html" class="footer-icon" aria-label="Fuel Info">
+                    <i class="fas fa-car"></i>
+                </a>
+                <a href="wallet.html" class="footer-icon" aria-label="Wallet">
+                    <i class="fas fa-wallet"></i>
+                </a>
+                <a href="pickup-points.html" class="footer-icon" aria-label="Pickup Points">
+                    <i class="fas fa-map-marker-alt"></i>
+                </a>
+                <a href="profile.html" class="footer-icon" aria-label="Profile">
+                    <i class="fas fa-user"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        async function startCamera() {
+            try {
+                // Request access to the camera
+                const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+                document.getElementById('camera-feed').srcObject = stream;
+            } catch (error) {
+                console.error('Error accessing the camera: ', error);
+                alert('Unable to access the camera. Please check your browser permissions.');
+            }
+        }
+
+        // Start the camera on page load
+        window.addEventListener('load', startCamera);
+    </script>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>
+

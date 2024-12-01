@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobigo - Pickup Points</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .pickup-point {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .pickup-point h6 {
+            margin-bottom: 10px;
+        }
+        .pickup-point p {
+            margin: 5px 0;
+        }
+        .directions-btn {
+            display: block;
+            margin-top: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <!-- Header -->
+    <header class="navbar navbar-dark py-3 px-4">
+        <div class="d-flex align-items-center">
+            <a href="index.html" class="d-flex align-items-center">
+                <img src="assets/logo.png" alt="Mobigo-Logo" class="navbar-logo">
+            </a>
+        </div>
+        
+    </header>
+
+    <!-- Main Content -->
+    <main class="container py-5">
+        <h1 class="text-center mb-4">Pickup Points</h1>
+
+        <!-- Pickup Points List -->
+        
+        
+        <div class="pickup-point">
+            <h6><strong>Pickup Point: Railway Station</strong></h6>
+            <p><strong>Type:</strong> Staffed </p>
+            <p><strong>Vehicles Available:</strong> 1 car, 2 bikes , 2 scooty </p>
+            <p><strong>Distance from Current Location:</strong> 20.0 km</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=calicut+Railway+Station" target="_blank" class="btn btn-outline-primary directions-btn">Get Directions</a>
+            <a href="pick1.html" class="btn btn-secondary mt-2">View Details</a>
+        </div>
+        
+        
+        <div class="pickup-point">
+            <h6><strong>Pickup Point: NIT Calicut</strong></h6>
+            <p><strong>Type:</strong> Automated</p>
+            <p><strong>Vehicles Available:</strong> 1 bike , 1 scooty</p>
+            <p><strong>Distance from Current Location:</strong> 2.5 km</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=nit+calicut+campus" target="_blank" class="btn btn-outline-primary directions-btn">Get Directions</a>
+            <a href="pick2.html" class="btn btn-secondary mt-2">View Details</a>
+        </div>
+
+        <div class="pickup-point">
+            <h6><strong>Pickup Point: Airport Terminal</strong></h6>
+            <p><strong>Type:</strong> Staffed</p>
+            <p><strong>Vehicles Available:</strong> 1 car , 1 bike </p>
+            <p><strong>Distance from Current Location:</strong> 7.1 km</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Airport+Terminal" target="_blank" class="btn btn-outline-primary directions-btn">Get Directions</a>
+            <a href="pick2.html" class="btn btn-secondary mt-2">View Details</a>
+        </div>
+
+        <div class="pickup-point">
+            <h6><strong>Pickup Point: Calicut Beach</strong></h6>
+            <p><strong>Type:</strong> Automated</p>
+            <p><strong>Vehicles Available:</strong>  2 bikes , 2 scooty</p>
+            <p><strong>Distance from Current Location:</strong> 3.0 km</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Railway+Station" target="_blank" class="btn btn-outline-primary directions-btn">Get Directions</a>
+            <a href="pick3.html" class="btn btn-secondary mt-2">View Details</a>
+        </div>
+
+        <div class="pickup-point">
+            <h6><strong>Pickup Point: City Mall</strong></h6>
+            <p><strong>Type:</strong> Staffed</p>
+            <p><strong>Vehicles Available:</strong> 1 car , 1 bike</p>
+            <p><strong>Distance from Current Location:</strong> 5.3 km</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=City+Mall" target="_blank" class="btn btn-outline-primary directions-btn">Get Directions</a>
+            <a href="pick4.html" class="btn btn-secondary mt-2">View Details</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer text-light mt-auto py-3">
+        <div class="container text-center">
+            <!-- Row of icons -->
+            <div class="d-flex justify-content-between">
+                <a href="home.html" class="footer-icon" aria-label="Home">
+                    <i class="fas fa-home"></i>
+                </a>
+                <a href="qr-code.html" class="footer-icon" aria-label="QR Code">
+                    <i class="fas fa-qrcode"></i>
+                </a>
+                <a href="fuelinfo.html" class="footer-icon" aria-label="Fuel Info">
+                    <i class="fas fa-car"></i>
+                </a>
+                <a href="wallet.html" class="footer-icon" aria-label="Wallet">
+                    <i class="fas fa-wallet"></i>
+                </a>
+                <a href="pickup-points.html" class="footer-icon" aria-label="Pickup Points">
+                    <i class="fas fa-map-marker-alt"></i>
+                </a>
+                <a href="profile.html" class="footer-icon" aria-label="Profile">
+                    <i class="fas fa-user"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

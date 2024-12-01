@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <!-- Header -->
+    <header class="navbar navbar-dark py-3 px-4">
+        <div class="d-flex align-items-center">
+            <a href="index.html" class="d-flex align-items-center">
+                <img src="assets/logo.png" alt="Mobigo-Logo" class="navbar-logo">
+            </a>
+        </div>
+       
+    </header>
+
+    <!-- Main Content -->
+    <main class="container py-5">
+        <h1 class="text-center mb-4">Payment Options</h1>
+
+        <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title mb-3">Choose Your Payment Method</h5>
+
+                <!-- Mobigo Wallet Payment Option -->
+                <div class="mb-3">
+                    <button class="btn btn-success w-100 d-flex align-items-center" onclick="location.href='paid.html'">
+                        <i class="fas fa-wallet me-2"></i> Pay with Mobigo Wallet
+                    </button>
+                </div>
+
+                <!-- Credit/Debit Card Payment Option -->
+                <div class="mb-3">
+                    <button class="btn btn-primary w-100 d-flex align-items-center" onclick="location.href='paid.html'">
+                        <i class="fas fa-credit-card me-2"></i> Pay with Credit/Debit Card
+                    </button>
+                </div>
+                
+
+                <!-- UPI Payment Option -->
+                <div class="mb-3">
+                    <button class="btn btn-warning w-100 d-flex align-items-center" onclick="location.href='paid.html'">
+                        <i class="fas fa-mobile-alt me-2"></i> Pay with UPI
+                    </button>
+                </div>
+
+                <!-- PayPal Payment Option -->
+                <div class="mb-3">
+                    <button class="btn btn-info w-100 d-flex align-items-center" onclick="location.href='paypal.html'">
+                        <i class="fab fa-paypal me-2"></i> Pay with PayPal
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer text-light mt-auto py-3">
+    <div class="container text-center">
+        <!-- Row of icons -->
+        <div class="d-flex justify-content-between">
+            <a href="home.html" class="footer-icon" aria-label="Home">
+                <i class="fas fa-home"></i>
+            </a>
+            <a href="qr-code.html" class="footer-icon" aria-label="QR Code">
+                <i class="fas fa-qrcode"></i>
+            </a>
+            <a href="fuelinfo.html" class="footer-icon" aria-label="Fuel Info">
+                <i class="fas fa-car"></i>
+            </a>
+            <a href="wallet.html" class="footer-icon" aria-label="Wallet">
+                <i class="fas fa-wallet"></i>
+            </a>
+            <a href="pickup-points.html" class="footer-icon" aria-label="Pickup Points">
+                <i class="fas fa-map-marker-alt"></i>
+            </a>
+            <a href="profile.html" class="footer-icon" aria-label="Profile">
+                <i class="fas fa-user"></i>
+            </a>
+        </div>
+    </div>
+</footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

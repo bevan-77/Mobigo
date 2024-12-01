@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobigo - Book Vehicle</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <!-- Header -->
+    <header class="navbar navbar-dark py-3 px-4">
+        <div class="d-flex align-items-center">
+            <a href="index.html" class="d-flex align-items-center">
+                <img src="assets/logo.png" alt="Mobigo-Logo" class="navbar-logo">
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container py-5">
+        <h1 class="text-center mb-4">Book Your Vehicle</h1>
+
+        <!-- Booking Form -->
+        <form id="bookingForm">
+            <!-- Pickup and Drop Time -->
+            <div class="mb-3">
+                <label for="pickupTime" class="form-label">Pickup Time</label>
+                <input type="datetime-local" class="form-control" id="pickupTime" required>
+            </div>
+            <div class="mb-3">
+                <label for="dropoffTime" class="form-label">Drop-off Time</label>
+                <input type="datetime-local" class="form-control" id="dropoffTime" required>
+            </div>
+
+            <!-- Enter Kilometers -->
+            <div class="mb-3">
+                <label for="kilometers" class="form-label">Enter Kilometers (Minimum 10, multiples of 5)</label>
+                <input type="number" class="form-control" id="kilometers" min="10" step="5" required>
+            </div>
+
+            <!-- Calculate Button -->
+            <button type="button" id="calculateBtn" class="btn btn-primary mb-3">Calculate</button>
+
+            <!-- Calculation and Charges -->
+            <div id="chargesSummary" class="mb-4 d-none">
+                <p id="minCharge" class="fw-bold">Minimum Charge for 10km: ₹120</p>
+                <p id="extraCharge" class="fw-bold">Extra Charge for each additional 5km: ₹50</p>
+                <p id="totalAmount" class="fw-bold"></p>
+            </div>
+
+            <!-- Warning Message -->
+            <div class="alert alert-info mt-4">
+                Please be aware that if the vehicle usage exceeds the designated kilometers, charges will be automatically deducted from your wallet in 5-km intervals. If your wallet balance is insufficient, additional charges will be applied when returning the vehicle.
+
+            <!-- Personal Details Form -->
+            <div id="personalDetails" class="d-none">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="dlNumber" class="form-label">Driving License Number</label>
+                    <input type="text" class="form-control" id="dlNumber" required>
+                </div>
+
+                <!-- Pay Now Button -->
+                <a href="pay.html" class="btn btn-success mt-3">Pay Now</a>
+            </div>
+        </form>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer text-light mt-auto py-3">
+        <div class="container text-center">
+            <!-- Row of icons -->
+            <div class="d-flex justify-content-between">
+                <a href="home.html" class="footer-icon" aria-label="Home">
+                    <i class="fas fa-home"></i>
+                </a>
+                <a href="qr-code.html" class="footer-icon" aria-label="QR Code">
+                    <i class="fas fa-qrcode"></i>
+                </a>
+                <a href="fuelinfo.html" class="footer-icon" aria-label="Fuel Info">
+                    <i class="fas fa-car"></i>
+                </a>
+                <a href="wallet.html" class="footer-icon" aria-label="Wallet">
+                    <i class="fas fa-wallet"></i>
+                </a>
+                <a href="pickup-points.html" class="footer-icon" aria-label="Pickup Points">
+                    <i class="fas fa-map-marker-alt"></i>
+                </a>
+                <a href="profile.html" class="footer-icon" aria-label="Profile">
+                    <i class="fas fa-user"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('calculateBtn').addEventListener('click', function() {
+            const kilometers = parseInt(document.getElementById('kilometers').value, 10);
+
+            // Validate kilometers
+            if (kilometers < 10 || kilometers % 5 !== 0) {
+                alert('Please enter kilometers as a minimum of 10 and in multiples of 5.');
+                return;
+            }
+
+            const minCharge = 120;
+            const extraChargePer5Km = 50;
+            let totalAmount = minCharge;
+
+            if (kilometers > 10) {
+                const extraKm = kilometers - 10;
+                const extraIntervals = extraKm / 5;
+                totalAmount += extraIntervals * extraChargePer5Km;
+            }
+
+            document.getElementById('totalAmount').textContent = `Total Amount: ₹${totalAmount}`;
+            document.getElementById('chargesSummary').classList.remove('d-none');
+            document.getElementById('personalDetails').classList.remove('d-none');
+        });
+    </script>
+</body>
+
+</html>

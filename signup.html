@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobigo - Sign Up</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <!-- Header -->
+
+    <header class="navbar navbar-dark  py-3 px-4">
+        <div class="d-flex align-items-center">
+            <a href="index.html" class="d-flex align-items-center">
+                <img src="assets/logo.png" alt="Mobigo-Logo" class="navbar-logo" >
+                
+            </a>
+        </div>
+        <div>
+            <a href="login.html" class="btn btn-outline-light me-2">Login</a>
+            <a href="signup.html" class="btn btn-primary">Sign Up</a>
+        </div>
+    </header>
+
+    <main class="container-fluid py-5" style="background-color: #f8f9fa; padding: 0 15px;">
+        <div class="signup-container d-flex justify-content-center">
+            <div class="signup-form-wrapper p-4 rounded" style="max-width: 500px; width: 100%; margin-top: -40px;">
+                <h1 class="text-center mb-4 intro-text main-title">Sign Up</h1>
+                <form id="signupForm" action="signup-process.html" method="post" class="signup-form" enctype="multipart/form-data">
+                    <!-- Form Fields -->
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="firstName" class="form-label">First Name</label>
+                            <input type="text" class="form-control" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="lastName" class="form-label">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Phone</label>
+                        <input type="tel" class="form-control" id="phone" name="phone" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="drivingLicense" class="form-label">Upload Driving License</label>
+                        <input type="file" class="form-control" id="drivingLicense" name="drivingLicense" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="aadharPassport" class="form-label">Upload Aadhar/Passport</label>
+                        <input type="file" class="form-control" id="aadharPassport" name="aadharPassport" required>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="terms" name="terms" required>
+                        <label class="form-check-label" for="terms">I agree to the <a href="terms.html" class="text-decoration-none" style="color: #4b6f59;">terms and conditions</a></label>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    
+
+    
+
+   
+    <footer class="footer text-light mt-auto py-3">
+        <div class="container text-center">
+            <!-- Row of icons -->
+            <div class="d-flex justify-content-between">
+                <a href="index.html" class="footer-icon" aria-label="Home">
+                    <i class="fas fa-home"></i>
+                </a>
+                <a href="qr-code.html" class="footer-icon" aria-label="QR Code">
+                    <i class="fas fa-qrcode"></i>
+                </a>
+                <a href="fuelinfo.html" class="footer-icon" aria-label="Fuel Info">
+                    <i class="fas fa-car"></i>
+                </a>
+                <a href="wallet.html" class="footer-icon" aria-label="Wallet">
+                    <i class="fas fa-wallet"></i>
+                </a>
+                <a href="pickup-points.html" class="footer-icon" aria-label="Pickup Points">
+                    <i class="fas fa-map-marker-alt"></i>
+                </a>
+                <a href="profile.html" class="footer-icon" aria-label="Profile">
+                    <i class="fas fa-user"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    
+    
+
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent form from submitting to a server
+            // Perform validation or other logic here if needed
+            window.location.href = 'login.html'; // Redirect to index.html
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Mobigo</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- Navigation Bar -->
+    <header class="navbar navbar-dark py-3 px-4">
+        <div class="d-flex align-items-center">
+            <a href="index.html" class="d-flex align-items-center">
+                <img src="assets/logo.png" alt="Mobigo-Logo" class="navbar-logo">
+            </a>
+        </div>
+       
+    </header>
+
+    <!-- Main Content -->
+    <main class="container py-5">
+        <h1 class="text-center mb-4">Profile Details</h1>
+
+        <!-- User Details -->
+        <div class="profile-card p-4 border rounded">
+            <h3 class="mb-4">Personal Information</h3>
+            <table class="table table-bordered table-hover">
+                <tbody>
+                    <tr>
+                        <th>Name</th>
+                        <td id="user-name">John Doe</td>
+                    </tr>
+                    <tr>
+                        <th>Email</th>
+                        <td id="user-email">johndoe@example.com</td>
+                    </tr>
+                    <tr>
+                        <th>Phone</th>
+                        <td id="user-phone">+91 9876543210</td>
+                    </tr>
+                    <tr>
+                        <th>Date of Birth</th>
+                        <td id="user-dob">01/01/1990</td>
+                    </tr>
+                    <tr>
+                        <th>Age</th>
+                        <td id="user-age">34</td>
+                    </tr>
+                    <tr>
+                        <th>Driving License Number</th>
+                        <td id="user-license">DL123456789</td>
+                    </tr>
+                    <tr>
+                        <th>Aadhar Number</th>
+                        <td id="user-aadhar">1234 5678 9101</td>
+                    </tr>
+                    <tr>
+                        <th>Address</th>
+                        <td id="user-address">123 Main Street, City, State, 123456</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="text-center mt-4">
+                <a href="edit-profile.html" class="btn btn-warning">Edit Profile</a>
+            </div>
+        </div>
+
+        <!-- Contact Us Section -->
+        <div class="contact-us mt-5 p-4 border rounded">
+            <h3 class="text-center mb-4">Contact Us</h3>
+            <p>If you have any questions or need support, please reach out to us:</p>
+            <p>Email: <a href="mailto:support@mobigo.com">support@mobigo.com</a></p>
+            <p>Phone: +91 1234 567 890</p>
+            <p>Address: 456 Support Street, City, State, 123456</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer text-light mt-auto py-3">
+        <div class="container text-center">
+            <!-- Row of icons -->
+            <div class="d-flex justify-content-between">
+                <a href="home.html" class="footer-icon" aria-label="Home">
+                    <i class="fas fa-home"></i>
+                </a>
+                <a href="qr-code.html" class="footer-icon" aria-label="QR Code">
+                    <i class="fas fa-qrcode"></i>
+                </a>
+                <a href="fuelinfo.html" class="footer-icon" aria-label="Fuel Info">
+                    <i class="fas fa-car"></i>
+                </a>
+                <a href="wallet.html" class="footer-icon" aria-label="Wallet">
+                    <i class="fas fa-wallet"></i>
+                </a>
+                <a href="pickup-points.html" class="footer-icon" aria-label="Pickup Points">
+                    <i class="fas fa-map-marker-alt"></i>
+                </a>
+                <a href="profile.html" class="footer-icon" aria-label="Profile">
+                    <i class="fas fa-user"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>
